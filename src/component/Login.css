@@ -1,0 +1,33 @@
+.login{
+    height: 100vh;
+}
+
+.login__logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login__logo-wrap{
+    align-self: center;
+}
+
+.login button{
+    position: absolute;
+    bottom: 200px;
+    left: 40%;
+    width: 20%;
+    border-radius: 5px;
+    background-color: #1877f2;
+    color: white;
+    height: 50px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border: transparent;
+    cursor: pointer;
+    transition: all .2s ease-in;
+}
+
+.login button:hover{
+    background-color: #f0f2f5;
+    color: #333;
+}

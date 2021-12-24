@@ -1,0 +1,91 @@
+.messageSender{
+    margin-top: 50px;
+    width: 100%;
+    max-width: 100%;
+    background-color: white;
+    border-radius: 30px;
+    padding: 10px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+.messageSender__avatar{
+    margin-right: 10px;
+    width: 40px;
+    cursor: pointer;
+}
+
+.messageSender__top{
+    border-radius: 30px;
+    padding: 20px;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.messageSender__form{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.messageSender__form button{
+    display: none;
+}
+
+.messageSender__input{
+    border-color: transparent;
+    border-radius: 30px;
+    padding: 20px;
+    font-size: 1rem;
+    height: 60%;
+    background-color:#f0f2f5;
+    opacity: 0.7;
+    transition: all .3s linear;
+    outline: none;
+}
+
+.messageSender__input:hover{
+    opacity: 1;
+}
+
+.messageSender__input:focus{
+    opacity: 1;
+}
+
+.messageSender__input:first-child{
+    width: 400px;
+}
+
+.messageSender__input:nth-child(2){
+    width: 150px;
+}
+
+.messageSender__bottom{
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid #f0f2f5;
+}
+
+
+
+.messageSender__option{
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    transition: all .2s linear;
+    background-color: white;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.messageSender__option:hover{
+    background-color: #f0f2f5;
+}
+
+.messageSender__option h3{
+    margin-bottom: 0;
+    margin-left: 10px;
+    color: #333;
+}
+

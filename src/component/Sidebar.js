@@ -10,7 +10,7 @@ function Sidebar() {
     return (
         <div className="Sidebar">
             <SidebarRow 
-                src="#"
+                src="https://joeschmoe.io/api/v1/random"
                 title="My Name"
             />
             <SidebarRow 
@@ -24,18 +24,18 @@ function Sidebar() {
             />
 
             <SidebarRow 
-            Icon={RestoreIcon}
-            title="Kỷ niệm"
+                Icon={RestoreIcon}
+                title="Kỷ niệm"
             />
 
             <SidebarRow 
-            Icon={FlagIcon}
-            title="Trang"
+                Icon={FlagIcon}
+                title="Trang"
             />
 
             <SidebarRow 
-            Icon={ArrowDropDownCircleIcon}
-            title="Thêm"
+                Icon={ArrowDropDownCircleIcon}
+                title="Thêm"
             />
         </div>
     )

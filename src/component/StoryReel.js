@@ -7,33 +7,33 @@ function StoryReel() {
     return (
         <div className="storyReel">
             <Story className="storyReel__story"
-                image="https://scontent.fhan2-3.fna.fbcdn.net/v/t15.5256-10/p480x480/244413760_232224342222865_5678319199828066450_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=ad6a45&_nc_ohc=RSHGyo_QDHMAX-J1gtL&_nc_ht=scontent.fhan2-3.fna&oh=d2ccf9bef33cea30b00640cb1cd5c4c0&oe=616A0461"
-                profileSrc="https://scontent.fhan2-3.fna.fbcdn.net/v/t1.6435-1/p320x320/242501385_1767648200290066_4608567083386657991_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=7206a8&_nc_ohc=C_akiSXM6M8AX9mJW03&_nc_ht=scontent.fhan2-3.fna&oh=c3b7f36905be50cb2bc8119dc603ea69&oe=618A8240"
-                title="Vũ Thu Hương"    
-            />    
+                image="https://static.independent.co.uk/2021/06/16/08/newFile-4.jpg?width=982&height=726&auto=webp&quality=75"
+                profileSrc="https://i.guim.co.uk/img/media/26392d05302e02f7bf4eb143bb84c8097d09144b/446_167_3683_2210/master/3683.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=49ed3252c0b2ffb49cf8b508892e452d"
+                title="Name 1"    
+            />  
             
-            <Story 
-                image="https://scontent.fhan2-3.fna.fbcdn.net/v/t15.5256-10/p480x480/244413760_232224342222865_5678319199828066450_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=ad6a45&_nc_ohc=RSHGyo_QDHMAX-J1gtL&_nc_ht=scontent.fhan2-3.fna&oh=d2ccf9bef33cea30b00640cb1cd5c4c0&oe=616A0461"
-                profileSrc="https://scontent.fhan2-3.fna.fbcdn.net/v/t1.6435-1/p320x320/242501385_1767648200290066_4608567083386657991_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=7206a8&_nc_ohc=C_akiSXM6M8AX9mJW03&_nc_ht=scontent.fhan2-3.fna&oh=c3b7f36905be50cb2bc8119dc603ea69&oe=618A8240"
-                title="Vũ Thu Hương"    
+            <Story className="storyReel__story"
+                image="https://static.independent.co.uk/2021/06/16/08/newFile-4.jpg?width=982&height=726&auto=webp&quality=75"
+                profileSrc="https://i.guim.co.uk/img/media/26392d05302e02f7bf4eb143bb84c8097d09144b/446_167_3683_2210/master/3683.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=49ed3252c0b2ffb49cf8b508892e452d"
+                title="Name 1"    
             />  
 
-            <Story 
-                image="https://scontent.fhan2-3.fna.fbcdn.net/v/t15.5256-10/p480x480/244413760_232224342222865_5678319199828066450_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=ad6a45&_nc_ohc=RSHGyo_QDHMAX-J1gtL&_nc_ht=scontent.fhan2-3.fna&oh=d2ccf9bef33cea30b00640cb1cd5c4c0&oe=616A0461"
-                profileSrc="https://scontent.fhan2-3.fna.fbcdn.net/v/t1.6435-1/p320x320/242501385_1767648200290066_4608567083386657991_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=7206a8&_nc_ohc=C_akiSXM6M8AX9mJW03&_nc_ht=scontent.fhan2-3.fna&oh=c3b7f36905be50cb2bc8119dc603ea69&oe=618A8240"
-                title="Vũ Thu Hương"    
+            <Story className="storyReel__story"
+                image="https://static.independent.co.uk/2021/06/16/08/newFile-4.jpg?width=982&height=726&auto=webp&quality=75"
+                profileSrc="https://i.guim.co.uk/img/media/26392d05302e02f7bf4eb143bb84c8097d09144b/446_167_3683_2210/master/3683.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=49ed3252c0b2ffb49cf8b508892e452d"
+                title="Name 1"    
             />  
 
-            <Story 
-                image="https://scontent.fhan2-3.fna.fbcdn.net/v/t15.5256-10/p480x480/244413760_232224342222865_5678319199828066450_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=ad6a45&_nc_ohc=RSHGyo_QDHMAX-J1gtL&_nc_ht=scontent.fhan2-3.fna&oh=d2ccf9bef33cea30b00640cb1cd5c4c0&oe=616A0461"
-                profileSrc="https://scontent.fhan2-3.fna.fbcdn.net/v/t1.6435-1/p320x320/242501385_1767648200290066_4608567083386657991_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=7206a8&_nc_ohc=C_akiSXM6M8AX9mJW03&_nc_ht=scontent.fhan2-3.fna&oh=c3b7f36905be50cb2bc8119dc603ea69&oe=618A8240"
-                title="Vũ Thu Hương"    
+            <Story className="storyReel__story"
+                image="https://static.independent.co.uk/2021/06/16/08/newFile-4.jpg?width=982&height=726&auto=webp&quality=75"
+                profileSrc="https://i.guim.co.uk/img/media/26392d05302e02f7bf4eb143bb84c8097d09144b/446_167_3683_2210/master/3683.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=49ed3252c0b2ffb49cf8b508892e452d"
+                title="Name 1"    
             />  
 
-            <Story 
-                image="https://scontent.fhan2-3.fna.fbcdn.net/v/t15.5256-10/p480x480/244413760_232224342222865_5678319199828066450_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=ad6a45&_nc_ohc=RSHGyo_QDHMAX-J1gtL&_nc_ht=scontent.fhan2-3.fna&oh=d2ccf9bef33cea30b00640cb1cd5c4c0&oe=616A0461"
-                profileSrc="https://scontent.fhan2-3.fna.fbcdn.net/v/t1.6435-1/p320x320/242501385_1767648200290066_4608567083386657991_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=7206a8&_nc_ohc=C_akiSXM6M8AX9mJW03&_nc_ht=scontent.fhan2-3.fna&oh=c3b7f36905be50cb2bc8119dc603ea69&oe=618A8240"
-                title="Vũ Thu Hương"    
+            <Story className="storyReel__story"
+                image="https://static.independent.co.uk/2021/06/16/08/newFile-4.jpg?width=982&height=726&auto=webp&quality=75"
+                profileSrc="https://i.guim.co.uk/img/media/26392d05302e02f7bf4eb143bb84c8097d09144b/446_167_3683_2210/master/3683.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=49ed3252c0b2ffb49cf8b508892e452d"
+                title="Name 1"    
             />  
         </div>
     )

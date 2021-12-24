@@ -1,0 +1,82 @@
+.post{
+    padding: 10px 0;
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 20px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.post__top{
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.post__top-info{
+    margin-left: 10px;
+}
+
+.post__top-info h3,.post__top-info p{
+    margin: 0;
+}
+
+.post__bottom{
+    margin: 10px 0px;
+    position: relative;
+    margin: 0 20px;
+    border-bottom: 1px solid #e0e2e4;
+}
+
+.post__img{
+    max-width: 100%;
+}
+
+.post__like-current{
+    border-top: 1px solid #f0f2f5;
+    margin-left: 20px;
+    padding: 10px;
+}
+
+.post__like-current span{
+    margin-left: 10px;
+    font-size: 1.2rem;
+}
+
+.post__react{
+    position: relative;
+}
+
+.post__react::before{
+    content: "";
+    top:-10px;
+    left: 40px;
+    position: absolute;
+    width: 90%;
+    height: 1px;
+    background-color: #e0e2e4;
+}
+
+.post__react-option{
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: white;
+    justify-content: center;
+}
+
+.post__react-option h3{
+    margin-left: 10px;
+}
+
+.post__react-option span{
+    font-size: 1.6rem;
+}
+
+.post__react-option:hover{
+    background-color: #f0f2f5;
+}
+
+
+
+

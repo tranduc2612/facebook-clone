@@ -5,70 +5,80 @@ import EmojiFlagsIcon from '@mui/icons-material/EmojiFlags';
 import SubscriptionsIcon from '@mui/icons-material/Subscriptions';
 import GroupsIcon from '@mui/icons-material/Groups';
 import StoreOutlinedIcon from '@mui/icons-material/StoreOutlined';
-import { Avatar, IconButton } from '@material-ui/core';
+import { IconButton } from '@material-ui/core';
+import { Avatar } from 'antd';
 import MessageOutlinedIcon from '@mui/icons-material/MessageOutlined';
 import MenuIcon from '@mui/icons-material/Menu';
 import CircleNotificationsRoundedIcon from '@mui/icons-material/CircleNotificationsRounded';
 import ArrowDropDownRoundedIcon from '@mui/icons-material/ArrowDropDownRounded';
+import { Row, Col } from 'antd';
 import './Header.css'
 
 function Header() {
     return (
-        <div className="header">
-            <div className="header__left">
-                <div className="header__left-logo">
-                    <a href="#">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/150px-Facebook_f_logo_%282019%29.svg.png" alt=""></img>
-                    </a>
-                </div>
-                <div className="header__left-search"> 
-                    <SearchOutlined />
-                    <input type="" name="" value="" placeholder="Tìm kiếm trên Facebook" />
-                </div>
+        <Row>
+            <div className="header">
+                <Col span={7}>
+                    <div className="header__left">
+                        <div className="header__left-logo">
+                            <a href="#">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/150px-Facebook_f_logo_%282019%29.svg.png" alt=""></img>
+                            </a>
+                        </div>
+                        <div className="header__left-search"> 
+                            <SearchOutlined />
+                            <input type="" name="" placeholder="Tìm kiếm trên Facebook" />
+                        </div>
+                    </div>
+                </Col>
+            
+                <Col span={10}>
+                    <div className="header__center">
+                        <div className="header__center-option header__active-option">
+                            <HomeIcon />
+                        </div>
+
+                        <div className="header__center-option">
+                            <EmojiFlagsIcon />
+                        </div>
+                        <div className="header__center-option">
+                            <SubscriptionsIcon />
+                        </div>
+                        <div className="header__center-option">
+                            <GroupsIcon />
+                        </div>
+                        <div className="header__center-option">
+                            <StoreOutlinedIcon />
+                        </div>
+                    </div>
+                </Col>
+            
+                <Col span={7}>
+                    <div className="header__right">
+                        <div className="header__right-info">
+                            <Avatar src="https://joeschmoe.io/api/v1/random"/>
+                            <h4><a href="">My name</a></h4>
+                        </div>
+
+                        <IconButton>
+                            <MessageOutlinedIcon />
+                        </IconButton>
+
+                        <IconButton>
+                            <MenuIcon />
+                        </IconButton>
+
+                        <IconButton>
+                            <CircleNotificationsRoundedIcon />
+                        </IconButton>
+
+                        <IconButton>
+                            <ArrowDropDownRoundedIcon />
+                        </IconButton>
+                    </div>
+                </Col>
             </div>
-
-            <div className="header__center">
-                <div className="header__center-option header__active-option">
-                    <HomeIcon />
-                </div>
-
-                <div className="header__center-option">
-                    <EmojiFlagsIcon />
-                </div>
-                <div className="header__center-option">
-                    <SubscriptionsIcon />
-                </div>
-                <div className="header__center-option">
-                    <GroupsIcon />
-                </div>
-                <div className="header__center-option">
-                    <StoreOutlinedIcon />
-                </div>
-            </div>
-
-            <div className="header__right">
-                <div className="header__right-info">
-                    <Avatar />
-                    <h4><a href="">My name</a></h4>
-                </div>
-
-                <IconButton>
-                    <MessageOutlinedIcon />
-                </IconButton>
-
-                <IconButton>
-                    <MenuIcon />
-                </IconButton>
-
-                <IconButton>
-                    <CircleNotificationsRoundedIcon />
-                </IconButton>
-
-                <IconButton>
-                    <ArrowDropDownRoundedIcon />
-                </IconButton>
-            </div>
-        </div>
+        </Row>
     )
 }
 

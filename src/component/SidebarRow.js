@@ -1,5 +1,5 @@
 import React from 'react'
-import { Avatar } from '@material-ui/core';
+import { Avatar } from 'antd';
 import './SidebarRow.css'
 
 function SidebarRow({src, Icon, title}) {
@@ -7,7 +7,7 @@ function SidebarRow({src, Icon, title}) {
         <div className="sidebar__row">
                 {src && <Avatar src={src} />}
                 {Icon && <Icon />}
-
+                
                 <h4>{title}</h4>
         </div>
     )
