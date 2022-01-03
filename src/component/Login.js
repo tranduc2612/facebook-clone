@@ -1,8 +1,19 @@
-import React from 'react'
+import React from 'react';
+import {auth,provider} from './firebase'
+
 import './Login.css'
 function Login() {
     const signIn= ()=>{
-        // sign in
+        // auth.
+        //     signInWithPopup(provider)
+        //     .then((result)=>{
+        //         console.log(result)
+        //     })
+        //     .catch((error)=>{
+        //         alert(error.message)
+        //     })
+
+        console.log(auth,provider,'hello')
     }
     return (
         <div className='login'>
