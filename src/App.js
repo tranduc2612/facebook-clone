@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import './App.css';
 import Header from './component/Header'
 import Sidebar from './component/Sidebar'
@@ -6,34 +6,35 @@ import Feed from './component/Feed'
 import Login from './component/Login'
 import { Row, Col, } from 'antd';
 import 'antd/dist/antd.min.css'; 
-function App() {
-    const user = null;
-  return (
-      <div className="app">
-        {!user?<Login />:(
-            <>
-                <Header />
+import { StoreContext } from './component/Store';
 
-                <div className="app__body">
-                    <Row>
-                        <Col span={7}>
-                            <Sidebar />
-                        </Col>
-                        
-                        <Col span={12}>
-                            <Feed />
-                        </Col>
+export default function App() {
 
-                        <Col span={5}>
-                            <span>Thanh chat</span>
-                        </Col>
-                    </Row>
-                </div>
-            </>
-        )}
-          
-      </div>
-  );
+    const [{ user }, dispatch] = useContext(StoreContext);
+
+    return (
+        <div className="app">
+            {!user?<Login />:(
+                <>
+                    <Header />
+                    
+                    <div className="app__body">
+                        <Row>
+                            <Col span={7}>
+                                <Sidebar />
+                            </Col>
+                            
+                            <Col span={12}>
+                                <Feed />
+                            </Col>
+
+                            <Col span={5}>
+                                <span>Thanh chat</span>
+                            </Col>
+                        </Row>
+                    </div>
+                </>
+            )}  
+        </div>
+    );
 }
-
-export default App;

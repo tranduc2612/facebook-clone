@@ -1,19 +1,26 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import {auth,provider} from './firebase'
-
+import { StoreContext } from './Store';
+import {actionTypes} from './Store/reducer'
 import './Login.css'
-function Login() {
-    const signIn= ()=>{
-        // auth.
-        //     signInWithPopup(provider)
-        //     .then((result)=>{
-        //         console.log(result)
-        //     })
-        //     .catch((error)=>{
-        //         alert(error.message)
-        //     })
 
-        console.log(auth,provider,'hello')
+
+function Login() {
+    const [state,dispatch] = useContext(StoreContext)
+
+    const signIn= ()=>{
+        auth.
+            signInWithPopup(provider)
+            .then((result)=>{
+                dispatch({
+                    type: actionTypes.SET_USER,
+                    user: result.user
+                })
+            })
+            .catch((error)=>{
+                alert(error.message)
+            })
+
     }
     return (
         <div className='login'>

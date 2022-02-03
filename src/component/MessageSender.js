@@ -1,12 +1,13 @@
-import React,{useState} from 'react'
+import React,{useState,useContext} from 'react'
 import { Avatar } from 'antd';
 import { VideoCameraOutlined,PictureOutlined,SmileOutlined } from '@ant-design/icons';
 import './MessageSender.css'
+import { StoreContext } from './Store';
 
 function MessageSender() {
     const [input,setInput] = useState('');
     const [imgUrl,setImgUrl] = useState('');
-
+    const [{user}, dispatch] = useContext(StoreContext);
     const handleSubmit = (e)=>{
         e.preventDefault();
 
@@ -16,7 +17,7 @@ function MessageSender() {
     return (
         <div className="messageSender">
             <div className='messageSender__top'>
-                <Avatar src="https://joeschmoe.io/api/v1/random" className="messageSender__avatar" />
+                <Avatar src={user.photoURL} className="messageSender__avatar" />
                 <form className='messageSender__form'>
                     <input 
                         value={input}

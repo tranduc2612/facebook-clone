@@ -34,13 +34,13 @@ function Post({profilePic,image,username,timestamp,message}) {
             <div className='post__react'>
                 <Row justify='center'>
                     <Col span={7}>
-                        <div class="post__react-option">
+                        <div className="post__react-option">
                             <LikeOutlined />
                             <h3 style={{marginBottom:"0px"}}>Like</h3>
                         </div>
                     </Col>
                     <Col span={7}>
-                        <div class="post__react-option">
+                        <div className="post__react-option">
                             <CommentOutlined />
                             <h3 style={{marginBottom:"0px"}}>Comment</h3>
                         </div>                    

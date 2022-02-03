@@ -1,10 +1,24 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import StoryReel from './StoryReel'
 import MessageSender from './MessageSender'
 import Post from './Post'
 import './Feed.css'
+import db from './firebase'
 
 function Feed() {
+    const [post,setPosts] = useState([])
+
+    // useEffect(() => {
+    //     db.collections('posts').onSnapshot(snapshot => {
+    //         setPosts(snapshot.docs.map(doc=>{
+    //             return ({
+    //                 id:doc.id,
+    //                 data: doc.data()
+    //             })
+    //         }))
+    //     })
+    // },[])
+
     return (
         <div className="feed">
             <StoryReel />

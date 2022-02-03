@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import {SearchOutlined} from '@ant-design/icons'
 import HomeIcon from '@mui/icons-material/Home';
 import EmojiFlagsIcon from '@mui/icons-material/EmojiFlags';
@@ -12,9 +12,13 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CircleNotificationsRoundedIcon from '@mui/icons-material/CircleNotificationsRounded';
 import ArrowDropDownRoundedIcon from '@mui/icons-material/ArrowDropDownRounded';
 import { Row, Col } from 'antd';
+import { StoreContext } from './Store';
 import './Header.css'
 
 function Header() {
+    const [{user}, dispatch] = useContext(StoreContext);
+
+    console.log(user)
     return (
         <Row>
             <div className="header">
@@ -56,8 +60,8 @@ function Header() {
                 <Col span={7}>
                     <div className="header__right">
                         <div className="header__right-info">
-                            <Avatar src="https://joeschmoe.io/api/v1/random"/>
-                            <h4><a href="">My name</a></h4>
+                            <Avatar src={user.photoURL}/>
+                            <h4><a href="">{user.displayName}</a></h4>
                         </div>
 
                         <IconButton>
