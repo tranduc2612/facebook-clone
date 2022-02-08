@@ -3,11 +3,13 @@ import StoryReel from './StoryReel'
 import MessageSender from './MessageSender'
 import Post from './Post'
 import './Feed.css'
-import db from './firebase'
+import { q,db } from './firebase'
+import { getDocs,serverTimestamp,onSnapshot,doc,query,collection } from "firebase/firestore";
 
 function Feed() {
-    const [post,setPosts] = useState([])
-
+    const [posts,setPosts] = useState([])
+    
+    // v8.0
     // useEffect(() => {
     //     db.collections('posts').onSnapshot(snapshot => {
     //         setPosts(snapshot.docs.map(doc=>{
@@ -18,19 +20,48 @@ function Feed() {
     //         }))
     //     })
     // },[])
+    //v9.0
+
+
+    
+    
+    
+    
+   
+
+
+    
+useEffect(() => {
+    const unsubscribe = onSnapshot(q, (querySnapshot) => {
+    const data = [];
+    querySnapshot.forEach((doc) => {
+        data.push({data: doc.data(),id:doc.id});
+        
+    });
+    setPosts(data)
+});
+    
+},[])   
 
     return (
         <div className="feed">
             <StoryReel />
             <MessageSender />
 
+        {posts.map((post)=>{
+            console.log(post.id)
+              return(
             <Post 
-                profilePic="https://joeschmoe.io/api/v1/random"
-                image="https://media-cdn.laodong.vn/storage/newsportal/2020/8/21/829850/Bat-Cuoi-Truoc-Nhung-09.jpg?w=720&crop=auto&scale=both"
-                username="tranminhDuc"
-                timestamp="12:00"
-                message="is Workis Workis Workis Workis Workis Workis Workis Workis Workis Workis Workis Workis Workis Workis Workis Workis Workis Workis Workis Workis Workis Workis Workis Workis Workis Workis Workis Workis Workis Workis Workis Work"
-            />  
+            key={post.id}
+            profilePic={post.data.profilePic}
+            image={post.data.image}
+            username={post.data.username}
+            // timestamp={post.timestamp}
+            message={post.data.message}
+        />
+        )
+        })}
+
         </div>
     )
 }

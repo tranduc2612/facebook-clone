@@ -1,7 +1,7 @@
 .messageSender{
     margin-top: 50px;
     width: 100%;
-    max-width: 100%;
+    min-width: 759px;
     background-color: white;
     border-radius: 30px;
     padding: 10px;

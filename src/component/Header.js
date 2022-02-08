@@ -17,8 +17,7 @@ import './Header.css'
 
 function Header() {
     const [{user}, dispatch] = useContext(StoreContext);
-
-    console.log(user)
+    
     return (
         <Row>
             <div className="header">

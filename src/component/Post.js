@@ -3,7 +3,13 @@ import { Avatar } from 'antd';
 import { LikeOutlined, CommentOutlined, ShareAltOutlined} from '@ant-design/icons';
 import "./Post.css"
 import { Row, Col } from 'antd';
+
 function Post({profilePic,image,username,timestamp,message}) {
+    
+
+    const handleLike = ()=>{
+        console.log('like')
+    }
     return (
         <div className='post'>
             <div className='post__top'>
@@ -23,7 +29,7 @@ function Post({profilePic,image,username,timestamp,message}) {
             </div>
 
             <div className='post__image'>
-                <img src={image} alt="Ảnh" width="759px" height="100%"/>
+                {image?<img src={image} alt="Ảnh" width="759px" height="100%"/>:null}
             </div>
 
             <div className='post__like-current'>
@@ -31,7 +37,7 @@ function Post({profilePic,image,username,timestamp,message}) {
                 <span>1</span>
             </div>
 
-            <div className='post__react'>
+            <div className='post__react' onClick={handleLike}>
                 <Row justify='center'>
                     <Col span={7}>
                         <div className="post__react-option">

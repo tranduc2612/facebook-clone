@@ -3,6 +3,8 @@ import { Avatar } from 'antd';
 import { VideoCameraOutlined,PictureOutlined,SmileOutlined } from '@ant-design/icons';
 import './MessageSender.css'
 import { StoreContext } from './Store';
+import { q,db } from './firebase'
+import {addDoc, serverTimestamp,collection,query} from 'firebase/firestore'
 
 function MessageSender() {
     const [input,setInput] = useState('');
@@ -10,10 +12,23 @@ function MessageSender() {
     const [{user}, dispatch] = useContext(StoreContext);
     const handleSubmit = (e)=>{
         e.preventDefault();
+        creatPost(input,user.photoURL,user.displayName,imgUrl)
 
         setInput("");
         setImgUrl("");
     }
+
+    const creatPost = async (message,avatar,name,image) =>{
+        const q = query(collection(db, "posts"));
+        await addDoc(q,{
+            message: message,
+            profilePic: avatar,
+            username: name,
+            image: image,
+            timestamp: serverTimestamp()
+        })
+    }
+    
     return (
         <div className="messageSender">
             <div className='messageSender__top'>

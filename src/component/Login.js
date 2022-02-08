@@ -3,14 +3,13 @@ import {auth,provider} from './firebase'
 import { StoreContext } from './Store';
 import {actionTypes} from './Store/reducer'
 import './Login.css'
-
+import {signInWithPopup} from "firebase/auth";
 
 function Login() {
     const [state,dispatch] = useContext(StoreContext)
 
     const signIn= ()=>{
-        auth.
-            signInWithPopup(provider)
+        signInWithPopup(auth, provider)
             .then((result)=>{
                 dispatch({
                     type: actionTypes.SET_USER,
@@ -20,7 +19,7 @@ function Login() {
             .catch((error)=>{
                 alert(error.message)
             })
-
+        
     }
     return (
         <div className='login'>
